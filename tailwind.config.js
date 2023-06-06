@@ -6,8 +6,8 @@ module.exports = {
     extend: {
       colors: {
         primary: "#050816",
-        secondary: "#aaa6c3",
-        tertiary: "#151030",
+        secondary: "#d9dfd5",
+        tertiary: "#354a4b",
         "black-100": "#100d25",
         "black-200": "#090325",
         "white-100": "#f3f3f3",
@@ -20,6 +20,9 @@ module.exports = {
       },
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.jpg')",
+      },
+      backgroundColor: {
+        primary: "#223131",
       },
     },
   },
