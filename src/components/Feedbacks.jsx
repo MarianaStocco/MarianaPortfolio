@@ -11,7 +11,7 @@ const FeedbackCard = ({ type, img, index }) => {
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
     className='bg-[#8ba19c] p-10 rounded-3xl xs:w-[320px] w-full'
   >
-    <div className='mt-1'>
+    <div className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'>
       <p className='text-white tracking-wider text-[18px]'>{type}</p>
       <img
         src={img}
@@ -30,6 +30,7 @@ const Feedbacks = () => {
   const [showWeather, setShowWeather] = useState(null);
 
   const [loading, setLoading] = useState(false);
+ 
   const fetchWeather = async () => {
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${inputRef.current.value}&units=metric&appid=${api_key}`;
     setLoading(true);
@@ -63,9 +64,9 @@ const Feedbacks = () => {
   };
   return (
     <>
-      <div className={`mt-12 bg-[#d9dfd5] rounded-[20px]`}>
+      <div className={`mt-12 rounded-[20px]`}>
         <div
-          className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
+          className={`bg-tertiary rounded-2xl ${styles.padding}`}
         >
           <motion.div variants={textVariant()}>
             <p className={styles.sectionSubText}>What to wear today</p>
@@ -78,8 +79,8 @@ const Feedbacks = () => {
           ))}
         </div>
       </div>
-      <div className="bg-secondary h-auto grid place-items-center">
-        <div className="bg-tertiary w-96 p-4 rounded-md">
+      <div className="bg-tertiary h-auto flex justify-center">
+        <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
           <div className="flex items-center justify-between">
             <input
               type="text"
@@ -92,7 +93,7 @@ const Feedbacks = () => {
               <img
                 src="https://cdn-icons-png.flaticon.com/512/758/758651.png"
                 alt="..."
-                className="w-8 ml-2"
+                className="w-8 m-1"
               />
             </button>
           </div>
